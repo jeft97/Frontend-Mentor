@@ -25,7 +25,6 @@ a:active,
 a:link,
 a{
     text-decoration: none;
-    color: inherit;
 }
 
 html{
@@ -137,6 +136,7 @@ body{
 .social__item--link{
     font-size: clamp(2rem, 3.8vw, 3.8rem);
     transition: all .3s;
+    color: var(--clr-white);
 }
 .social__item--link:hover,
 .social__item--link:active{
