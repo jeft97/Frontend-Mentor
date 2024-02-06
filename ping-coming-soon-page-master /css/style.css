@@ -208,10 +208,10 @@ body{
 @media only screen and (min-width:1024px){
 
     html{
-        font-size: 55%;
+        font-size: 58%;
     }
     .wrapper{
-        max-width: 120rem;
+        max-width: 144rem;
     }
 
     .form{
