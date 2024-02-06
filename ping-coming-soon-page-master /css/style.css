@@ -208,7 +208,7 @@ body{
 @media only screen and (min-width:1024px){
 
     html{
-        font-size: 58%;
+        font-size: 50%;
     }
     .wrapper{
         max-width: 120rem;
@@ -220,7 +220,7 @@ body{
         align-items: center;
     }
     .input-group{
-        width: 60%;
+        width: 40%;
         position: relative;
     }
 
@@ -230,7 +230,7 @@ body{
         justify-content: center;
     }
     .illustration{
-        max-width: 70%;
+        max-width: 45%;
         margin: 0 auto;
     }
     
