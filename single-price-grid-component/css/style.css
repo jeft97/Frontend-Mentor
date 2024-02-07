@@ -159,7 +159,7 @@ body{
         font-size: 62.5%;
     }
     .container-grid{
-        max-width: 70%;
+        max-width: 65%;
         margin: 0 auto;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(2,auto);
@@ -193,5 +193,18 @@ body{
         grid-row: 2 / -1;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: .8rem;
+    }
+
+    .price>strong{
+        font-size: 3rem;
+    }
+
+    .paragraphy--3{
+        width: 25ch;
+        font-size: 1.8rem;
+    }
+    .button{
+        
+        margin-top: 4rem;
     }
 }
