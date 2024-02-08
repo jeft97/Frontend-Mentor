@@ -21,7 +21,10 @@ $bd-radius-default: .8rem;
 $font-f-default:'Poppins', sans-serif;
 
 
-.u-error-border{border-color: $color-primary-red !important;}
+.u-error-border{
+    border-color: $color-primary-red !important;
+    outline-color: $color-primary-red !important;
+}
 .u-a-shakeX{animation: shakeX .8s ease !important;}
 
 
@@ -54,7 +57,7 @@ body{
     background-color: $color-primary-red;
     background-image: url(../images/bg-intro-mobile.png);
     background-size: cover;
-    background-repeat: no-repeat;
+    
 }
 .hero{
     max-width: 37.5rem;
@@ -190,7 +193,9 @@ small{
     html{
         font-size: 52%;
     }
-
+    .wrapper{
+        background-image: url(../images/bg-intro-desktop.png);
+    }
     .hero{
         max-width: 50rem;
     }

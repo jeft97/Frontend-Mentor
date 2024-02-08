@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 /* VARIABLES*/
 .u-error-border {
-  border-color: hsl(0, 100%, 74%) !important; 
-  outline-color: hsl(0, 100%, 74%) !important;
-}
+  border-color: #ff7a7a !important;
+  outline-color: #ff7a7a !important; }
 
 .u-a-shakeX {
   animation: shakeX .8s ease !important; }
@@ -29,8 +28,7 @@ body {
   place-content: center;
   background-color: #ff7a7a;
   background-image: url(../images/bg-intro-mobile.png);
-  background-size: cover;
-  background-repeat: no-repeat; }
+  background-size: cover; }
 
 .hero {
   max-width: 37.5rem;
@@ -132,6 +130,8 @@ small {
 @media only screen and (min-width: 768px) {
   html {
     font-size: 52%; }
+  .wrapper {
+    background-image: url(../images/bg-intro-desktop.png); }
   .hero {
     max-width: 50rem; } }
 
