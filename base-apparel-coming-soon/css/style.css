@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root{
+
+--color-primary-esaturated-red: hsl(0, 36%, 70%);
+--color-primary-soft-red: hsl(0, 93%, 68%);
+
+--color-neutral-dark-grayish-red: hsl(0, 6%, 24%);
+
+--gradient-linear--1: linear-gradient(135deg,hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+--gradient-linear--2 :linear-gradient(135deg,hsl(0, 0%, 100%),hsl(0, 100%, 98%));
+
+--fs-default:1.6rem;
+--ff-default:'Josefin Sans', sans-serif;
+--fw-default:400;
+--line-h-default:1.5;
+
+}
+
+
+html{
+    font-size: 50%;
+}
+
+body{
+    font-size: var(--fs-default);
+    font-family: var(--ff-default);
+    font-weight: var(--fw-default);
+    background-image: var(--gradient-linear--2);
+}
+
+
+
+.container{
+    height: 100vh;
+   
+}
+
+.header{
+    padding: 3rem;
+}
+
+.logo{
+    height: 3.6rem;
+}
+
+.picture__img{
+    width: 100%;
+}
+
+.content{
+    padding: 6rem 4rem;
+    text-align: center;
+}
+
+.heading{
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: var(--color-neutral-dark-grayish-red);
+}
+
+.heading--sup,
+.heading--sub{
+    display: block;
+    letter-spacing: 1.4rem;
+}
+
+.heading--sup{
+    font-weight: 300;
+    color: var(--color-primary-esaturated-red);
+}
+
+.paragraphy{
+    color: var(--color-primary-esaturated-red);
+    margin-bottom: 1.2rem;
+    font-size: 1.8rem;
+}
+
+
+.form{
+    position: relative;
+    
+}
+
+.input{
+    background-color: transparent;
+    color: var(--color-primary-esaturated-red);
+    border: 1.5px solid var(--color-primary-esaturated-red);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    border-radius: 100rem;
+    font-size: 1.8rem;
+    
+}
+
+.input:focus{
+    outline-color: var(--color-primary-esaturated-red);
+}
+
+input::placeholder{
+    color: var(--color-primary-esaturated-red);
+}
+
+
+.button{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1.6rem 2.8rem;
+    border-radius: 100rem;
+    border-color: transparent;
+    background-image: var(--gradient-linear--1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
