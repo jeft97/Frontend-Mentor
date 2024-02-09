@@ -17,6 +17,11 @@
 
 }
 
+.u-border-error {
+    outline-color: var(--color-primary-soft-red) !important;
+    border-color: var(--color-primary-soft-red) !important;
+}
+
 
 html{
     font-size: 50%;
@@ -103,13 +108,12 @@ body{
 
 .form{
     position: relative;
-    
 }
 
 .input{
     background-color: transparent;
 
-    border: 1.5px solid var(--color-primary-esaturated-red);
+    border: 2px solid var(--color-primary-esaturated-red);
     padding: 1.5rem 3rem;
     width: 100%;
     border-radius: 100rem;

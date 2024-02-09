@@ -15,12 +15,14 @@ formSubmit.addEventListener("submit", function(e){
 
     if(!checkEmail(inputFilds)){
      
+        inputFilds.classList.add("u-border-error");
         labelErrorName.classList.remove("sr-only");
         iconError.classList.remove("sr-only");
         labelErrorName.textContent =`Please, provide a valid email`;
         return;
     }
 
+    inputFilds.classList.remove("u-border-error");
     labelErrorName.classList.add("sr-only");
     iconError.classList.add("sr-only");
 
