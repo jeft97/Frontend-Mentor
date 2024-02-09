@@ -153,7 +153,7 @@ input::placeholder{
 
 .icon-error{
     position: absolute;
-    right: 8rem;
+    right: 17%;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -195,10 +195,6 @@ input::placeholder{
         left: 4.6%;
         font-size: 1.8rem;
     }
-
-    .icon-error{
-        right: 10rem;
-    }
     
 }
 
@@ -236,10 +232,6 @@ input::placeholder{
 
     .input:focus{
         outline-width: 4px;
-    }
-
-    .icon-error{
-        right: 10rem;
     }
 
 }
