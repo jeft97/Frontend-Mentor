@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+
+
+--color--primary-red: hsl(0, 78%, 62%);
+--color--primary-cyan: hsl(180, 62%, 55%);
+--color--primary-orange: hsl(34, 97%, 64%);
+--color--primary-blue: hsl(212, 86%, 64%);
+
+
+--color-neutral-very-dark-blue: hsl(234, 12%, 34%);
+--color-neutral-grayish-blue: hsl(229, 6%, 66%);
+--color-neutral-very-light-gray: hsl(0, 0%, 98%);
+
+--max-width-grid-mobile: 37rem;
+--max-width-grid-desktop:120rem;
+
+--ff-default:'Poppins', sans-serif;
+--fs-default: 1.5rem;
+--fw-default:400;
+--line-h-default: 1.5;
+
+}
+
+
+html{
+    font-size: 50%;
+}
+
+body{
+    font-family: var(--ff-default);
+    font-weight: var(--fw-default);
+    font-size: var(--fs-default);
+    line-height: var(--line-h-default);
+
+    background-color: var(--color-neutral-very-light-gray);
+    color: var(--color-neutral-very-dark-blue);
+}
+
+
+.feature{
+    max-width: var(--max-width-grid-mobile);
+    margin: 0 auto;
+    padding: 6rem 0;
+}
+
+.feature__content{
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.heading{
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+.heading--main,
+.heading--sub{
+    display: block;
+}
+
+.heading--main{
+    font-weight: 300;
+    margin-bottom: .5rem;
+}
+
+.paragraphy{
+    font-size: 1.6rem;
+    color: var(--color-neutral-grayish-blue);
+}
+
+.feature__card > .card:not(:last-child){
+    margin-bottom: 2.5rem;
+    
+}
+
+.card{
+    border-radius: .5rem;
+    padding: 3rem;
+    box-shadow: 2px 10px 18px rgba(76, 78, 97, 0.2);
+    border-top: 3px solid transparent;
+}
+
+.card--cyan{
+    border-top-color: var(--color--primary-cyan);
+}
+.card--red{
+    border-top-color: var(--color--primary-red);
+}
+.card--orange{
+    border-top-color: var(--color--primary-orange);
+}
+.card--blue{
+    border-top-color: var(--color--primary-blue);
+}
+
+.card__title{
+    margin-bottom:1.5rem;
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+.card__description{
+    color: var(--color-neutral-grayish-blue);
+    margin-bottom: 4rem;
+}
+
+.icon-box{
+    display: flex;
+    justify-content: end;
+}
+
+.card--icon{
+    height: 6rem;
+}
