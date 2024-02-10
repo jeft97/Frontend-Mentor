@@ -14,6 +14,7 @@
 --color-neutral-very-light-gray: hsl(0, 0%, 98%);
 
 --max-width-grid-mobile: 37rem;
+--max-width-grid-tablet:76rem;
 --max-width-grid-desktop:120rem;
 
 --ff-default:'Poppins', sans-serif;
@@ -113,4 +114,81 @@ body{
 
 .card--icon{
     height: 6rem;
+}
+
+@media only screen and (min-width: 768px){
+    html{
+        font-size: 55%;
+    }
+
+    .heading{
+        font-size: 2.8rem;
+    }
+
+    .paragraphy{
+        font-size: 1.8rem;
+    }
+
+    .feature{
+        max-width: var(--max-width-grid-tablet);
+    }
+    .card__title{
+        font-size: 2.3rem;
+    }
+    .card__description{
+        font-size: 1.8rem
+    }
+
+    .card--icon{
+        height: 8rem;
+    }
+}
+
+@media only screen and (min-width : 1440px) {
+
+    html{
+        font-size: 62.5%;
+    }
+
+    .feature__card{
+        position: relative;
+    }
+
+    .card{
+        max-width: 40rem;
+        min-height: 24rem;
+        position: absolute;
+    }
+
+    .card--cyan{
+       top: 15rem;
+       left: -24rem;
+       
+
+    }
+    .card--red{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .card--orange{
+        left: 50%;
+        top:28rem;
+        transform: translateX(-50%);
+    }
+    .card--blue{
+        top: 15rem;
+        right: -24rem;
+    }
+
+    .card__title{
+        font-size: 2rem;
+    }
+    .card__description{
+        font-size: 1.4rem
+    }
+
+    .card--icon{
+        height: 5rem;
+    }
+    
 }
