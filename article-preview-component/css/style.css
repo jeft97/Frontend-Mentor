@@ -22,7 +22,7 @@
 
 
 html{
-    font-size: 50%;
+    font-size: 51%;
 }
 
 body{
@@ -44,8 +44,19 @@ body{
     max-width: 37.5rem;
     background-color: var(--color-white);
     border-radius: var(--bd-radius-default);
+    position: relative;
 }
 
+
+.share{
+    width: 100%;
+    background-color: var(--color-very-dark-grayish-blue);
+    position: absolute;
+    padding: 3rem;
+    bottom: 0;
+    border-bottom-left-radius: var(--bd-radius-default);
+    border-bottom-right-radius: var(--bd-radius-default);
+}
 
 .heading{
     margin-bottom: 1.2rem;
@@ -60,7 +71,7 @@ body{
 
 .card__main{
     padding:3rem 3rem 0 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
 }
 
 .card__footer{
@@ -81,7 +92,7 @@ body{
     justify-content: space-between;
 }
 .box-img > img{
-    height: 6rem;
+    height: 5rem;
     border-radius: 50%;
 }
 
@@ -105,6 +116,25 @@ body{
 .button{
     background-color: var(--color-light-grayish-blue);
     border: transparent;
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 50%;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;
+}
+
+.button:hover{
+    background-color:var(--color-light-grayish-blue) ;
+}
+
+.button:hover >.icon--share{
+    fill: var(--color-white);
+} 
+
+.icon--share{
+    fill: var(--color-very-dark-grayish-blue);
 }
