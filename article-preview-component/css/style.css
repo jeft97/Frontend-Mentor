@@ -56,7 +56,12 @@ body{
     bottom: 0;
     border-bottom-left-radius: var(--bd-radius-default);
     border-bottom-right-radius: var(--bd-radius-default);
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
+
 
 .heading{
     margin-bottom: 1.2rem;
@@ -116,7 +121,8 @@ body{
 .button{
     background-color: var(--color-light-grayish-blue);
     border: transparent;
-    padding: 1.2rem;
+    height: 3.5rem;
+    width: 3.5rem;
     border-radius: 50%;
     cursor: pointer;
 
