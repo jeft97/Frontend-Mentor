@@ -141,12 +141,14 @@ body{
 }
 
 .button--active{
-    transform: translateY(1rem) !important;
-    background-color: var(--color-grayish-glue) !important;
+    background-color: var(--color-desaturated-dark-blue) !important;
+}
+.button--active-transform{
+    transform: translateY(1.3rem) !important;
 }
 
 .icon--share-active{
-    fill: var(--color-white);
+    fill: var(--color-white)!important;
 }
 
 .button:hover{
@@ -232,10 +234,10 @@ body{
     }
 
     .card__footer{
-        margin-top: 2rem;
+        margin-top: 1.8rem;
     }
     .card__header{
-        flex-basis: 100%;
+        flex-basis: 90%;
     }
     .image-box{
         height: 100%;
@@ -248,7 +250,7 @@ body{
    .box-img > img{
         height: 5rem;
    }
-
+  
    .paragrahy{
     font-size: 1.5rem;
    }
@@ -259,4 +261,30 @@ body{
     font-size: 1.3rem;
    }  
 
+   .share{
+        width: 20rem;
+        right: 0;
+        bottom: 10.6rem;
+        transform: translateX(5rem);
+        padding: 1.2rem 2rem;
+        border-radius: var(--bd-radius-default);
+   }
+
+   .share::before{
+     content: "";
+     display: block;
+     position: absolute;
+     height: 2rem;
+     width: 2rem;
+     background-color: var(--color-very-dark-grayish-blue);
+     left: 50%;
+     bottom: -1rem;
+     clip-path: polygon(46% 100%, 0 31%, 100% 32%);
+     transform: translateX(-50%);
+   }
+
+   .share > span{
+        font-size: 1.3rem;
+   }
+   
 }
