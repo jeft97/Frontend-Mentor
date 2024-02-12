@@ -59,7 +59,13 @@ body{
 
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.4rem;
+}
+
+.share span{
+    text-transform: uppercase;
+    color: var(--color-grayish-glue);
+    font-size: 1.8rem;
 }
 
 
@@ -80,8 +86,9 @@ body{
 }
 
 .card__footer{
-    padding: 0 3rem 3rem 3rem;
+    margin-top: 6rem;
 }
+
 
 .card--img{
     width: 100%;
@@ -113,6 +120,7 @@ body{
 
 .box-content>strong{
     color: var(--color-very-dark-grayish-blue);
+    font-size: 1.6rem;
 }
 .box-content > time{
     color: var(--color-grayish-glue);
@@ -121,26 +129,134 @@ body{
 .button{
     background-color: var(--color-light-grayish-blue);
     border: transparent;
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 4.5rem;
+    width: 4.5rem;
     border-radius: 50%;
     cursor: pointer;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
     z-index: 1;
 }
 
-.button:hover{
-    background-color:var(--color-light-grayish-blue) ;
+.button--active{
+    transform: translateY(1rem) !important;
+    background-color: var(--color-grayish-glue) !important;
 }
 
-.button:hover >.icon--share{
+.icon--share-active{
     fill: var(--color-white);
-} 
+}
+
+.button:hover{
+    background-color:var(--color-light-grayish-blue);
+}
+
+
 
 .icon--share{
-    fill: var(--color-very-dark-grayish-blue);
+    fill: var(--color-desaturated-dark-blue);
+}
+
+@media only screen and (min-width:768px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .card{
+        max-width: 50.8rem;
+    }
+
+    
+    .card--img{
+        height: 30rem;
+
+    }
+
+    .heading{
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .card__main{
+        margin-top: 2.4rem;
+    }
+
+    .paragrahy{
+        font-size: 1.8rem;
+    }
+
+    .box-content>strong{
+        font-size: 1.8rem;
+    }
+    .box-content>time{
+        font-size: 1.4rem;
+    }
+    
+    .box-img > img{
+        height: 6.5rem;
+    }
+
+    .share{
+        padding: 3.5rem  3rem 3.5rem 3rem;
+    }
+
+}
+
+@media only screen and (min-width:1280px){
+
+    html{font-size: 62.5%;}
+    .card{
+        max-width: 90rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .heading{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .card--img{
+        width: 100%;
+        height: 100%;
+        border-top-right-radius:0;
+        border-bottom-left-radius: var(--bd-radius-default);
+    }
+
+    .card__main{
+        padding:0;
+        margin-bottom: 0
+    }
+
+    .card__footer{
+        margin-top: 2rem;
+    }
+    .card__header{
+        flex-basis: 100%;
+    }
+    .image-box{
+        height: 100%;
+    }
+
+   .card__main{
+     padding:0 3rem 3rem 3rem;
+   }
+
+   .box-img > img{
+        height: 5rem;
+   }
+
+   .paragrahy{
+    font-size: 1.5rem;
+   }
+   .box-content>strong{
+    font-size: 1.5rem;
+   }
+   .box-content>time{
+    font-size: 1.3rem;
+   }  
+
 }
