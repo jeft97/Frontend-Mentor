@@ -16,8 +16,20 @@
     --ff-default:"League Spartan", sans-serif;
     --fs-default: 1.5rem;
     --line-h-default: 1.5;
-
     --bd-radius-default: .8rem;
+
+
+    --max-width-desktop:102.4rem;
+    --max-width-tablet:76rem;
+    --max-width-mobile:37.5rem;
+
+    --translate-Y-1:2rem;
+    --translate-Y-2:4rem;
+
+    --translate-X-1:4rem;
+    --translate-X-2:8rem;
+
+
 }
 
 html{
@@ -41,6 +53,7 @@ body{
 
     background-color: var(--color--White);
     padding: 8rem 0;
+    overflow: hidden;
 }
 
 .pattern-top,
@@ -72,7 +85,8 @@ body{
 
 
 .feature{
-    max-width: 37.5rem;
+    max-width: var(--max-width-mobile);
+    z-index: 10;
 }
 
 
@@ -185,7 +199,7 @@ body{
     }
 
     .feature{
-        max-width: 76rem;
+        max-width: var(--max-width-tablet);
     }
 
     .heading{
@@ -230,13 +244,15 @@ body{
 
 
     .feature{
-        max-width: 102.4rem;
+        max-width: var(--max-width-desktop);
         display: grid;
 
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(2, auto);
         grid-row-gap: 5rem;
         grid-column-gap: 10rem;
+
+       
     
     }
     .feature__content{
@@ -270,6 +286,13 @@ body{
         list-style: 1.4;
     }
 
+    .testimonial--1{
+        transform: translateY(var(--translate-Y-1));
+    }
+    .testimonial--2{
+        transform: translateY(var(--translate-Y-2));
+    }
+
     .testimonial__author--name{
         font-size: 1.5rem;
     }
@@ -291,6 +314,14 @@ body{
         justify-content: center;
         gap: 2rem;
     }
+
+    .review--1{
+        transform: translateX(var(--translate-X-1));
+    }
+    .review--2{
+        transform: translateX(var(--translate-X-2));
+    }
+
     .review--icon{
         height: 1.5rem;
     }
@@ -301,12 +332,13 @@ body{
 
     .pattern-top{
         background-image: url(../images/bg-pattern-top-desktop.svg);
-        height: 50%;
-        width: 50%;
+        background-size: cover;
+
+        height: 100%;
+        width: 100%;
         top: 0;
         left: 0;
-        z-index: 1;
-
+        transform: translateX(-55%);
     }
 
     .pattern-bottom{
@@ -320,5 +352,8 @@ body{
         transform: translateX(20%);
        
     }
+
+
+
     
 }
