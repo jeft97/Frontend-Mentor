@@ -55,7 +55,7 @@ body{
     height: 100%;
     top:0;
     left: 0;
-    z-index: -1;
+   
     background-color: var(-color-neutral-dark-grayish-magenta);
 }
 
@@ -67,7 +67,7 @@ body{
 
     bottom: 0;
     left: 0;
-    z-index: 1;
+    
 }
 
 
@@ -230,20 +230,26 @@ body{
 
 
     .feature{
-
         max-width: 102.4rem;
         display: grid;
 
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(2, auto);
+        grid-row-gap: 5rem;
+        grid-column-gap: 10rem;
+    
     }
     .feature__content{
         grid-column: 1 / 2;
         grid-row: 1 / 2;
+
+        text-align: start;
     }
     .feature__reviews{
         grid-column: 2 / -1;
         grid-row: 1 / 2;
+
+        margin-top: 0;
     }
 
     .feature__testimonials{
@@ -251,10 +257,68 @@ body{
         grid-row: 2 / -1;
 
         flex-direction: row;
+        gap: 2rem;
     }
 
+    .heading{
+        width: 15ch;
+    
+    }
+    
+    .paragraphy{
+        font-size: 2rem;
+        list-style: 1.4;
+    }
+
+    .testimonial__author--name{
+        font-size: 1.5rem;
+    }
+
+    .testimonial__author--status{
+        font-size: 1.2rem;
+    }
+    .testimonial{
+        padding: 3rem;
+    }
+    .testimonial__author--avatar{
+        height: 4rem;
+    }
+    .testimonial__quote{
+        font-size: 1.6rem;
+    }
     .review{
         flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .review--icon{
+        height: 1.5rem;
+    }
+
+    .review--text{
+        font-size: 1.7rem;
+    }
+
+    .pattern-top{
+        background-image: url(../images/bg-pattern-top-desktop.svg);
+        height: 50%;
+        width: 50%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+    }
+
+    .pattern-bottom{
+        background-image: url(../images/bg-pattern-bottom-desktop.svg);
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+
+        transform: translateX(20%);
+       
     }
     
 }
