@@ -51,6 +51,9 @@ body{
 .cards{
     max-width: var(--max-width-mobile);
     padding: 4rem 0;
+
+    /*is availble if has display: grid*/
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
    
 }
 
@@ -129,6 +132,8 @@ body{
 }
 
 
+
+
 @media only screen and (min-width:768px){
     html{
         font-size: 55%;
@@ -151,9 +156,7 @@ body{
 
     .cards{
         max-width: var(--max-width-desktop);
-        
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
     }
 
    .card--1{
@@ -164,9 +167,10 @@ body{
         border-bottom-left-radius: 0;
         border-top-right-radius: var(--bd-radius-default);
    }
-
+   
    .card--description{
-     font-size: 1.3rem;
+      font-size: 1.3rem;
+      line-height: 1.8;
    }
 
    .btn{
@@ -174,3 +178,4 @@ body{
    }
 
 }
+
