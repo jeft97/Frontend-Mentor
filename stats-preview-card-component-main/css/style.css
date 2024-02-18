@@ -45,7 +45,7 @@ body {
 .wrapper {
    width: 100%;
    min-height: 100vh;
-
+   padding: 4rem 0;
    background-color: var(--color-primary-very-dark-blue);
 
    display: grid;
@@ -56,6 +56,8 @@ body {
    width: 100%;
    max-width: var(--max-width-mobile);
    background-color: var(--color-primary-dark-desaturated-blue);
+   border-bottom-left-radius: var(--bd-radius-default);
+   border-bottom-right-radius: var(--bd-radius-default);
 }
 
 picture {
@@ -86,8 +88,10 @@ picture {
 }
 
 .card--title {
-   font-size: 3.2rem;
+   font-size: 3rem;
+   font-weight: var(--fw-bold);
 }
+
 .card--description {
    font-size: 1.7rem;
    margin-top: 2rem;
@@ -110,7 +114,7 @@ picture {
 }
 
 .stats--number {
-   font-size: 3rem;
+   font-size: 2.5rem;
    color: var(--color-neutral-white);
 }
 .stats--label {
