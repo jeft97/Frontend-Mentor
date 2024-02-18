@@ -58,8 +58,30 @@ body {
    background-color: var(--color-primary-dark-desaturated-blue);
 }
 
+picture {
+   position: relative;
+   border-top-right-radius: var(--bd-radius-default);
+   border-top-left-radius: var(--bd-radius-default);
+}
+
+.card--picture {
+   border-radius: inherit;
+}
+
+.overlay {
+   border-radius: inherit;
+   position: absolute;
+   display: block;
+   width: 100%;
+   top: 0;
+   left: 0;
+   background-color: var(--color-primary-soft-violet);
+   filter: saturate(100%) opacity(0.6);
+   height: 100%;
+}
+
 .card__main {
-   padding: 4rem 2.7rem;
+   padding: 4rem 2rem;
    text-align: center;
 }
 
@@ -67,22 +89,32 @@ body {
    font-size: 3.2rem;
 }
 .card--description {
+   font-size: 1.7rem;
    margin-top: 2rem;
    margin-bottom: 4rem;
    color: var(--color-slightly-transparent-white);
 }
 
-picture {
-   position: relative;
+.stats {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
 }
 
-.overlay {
-   position: absolute;
-   display: block;
-   width: 100%;
-   top: 0;
-   left: 0;
-   background-color: var(--color-primary-soft-violet);
-   opacity: 0.6;
-   height: 100%;
+.stats__company,
+.stats__template,
+.stats__query {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+}
+
+.stats--number {
+   font-size: 3rem;
+   color: var(--color-neutral-white);
+}
+.stats--label {
+   font-size: 1.2rem;
+   text-transform: uppercase;
+   color: var(--color-slightly-transparent-white);
 }
