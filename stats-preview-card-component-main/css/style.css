@@ -79,7 +79,7 @@ picture {
    top: 0;
    left: 0;
    background-color: var(--color-primary-soft-violet);
-   filter: saturate(100%) opacity(0.6);
+   filter: saturate(150%) opacity(0.4);
    height: 100%;
 }
 
@@ -151,6 +151,7 @@ picture {
    br {
       display: none;
    }
+
    .card__main {
       grid-column: 1/2;
       grid-row: 1/1;
