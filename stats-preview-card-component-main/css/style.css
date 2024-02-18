@@ -24,7 +24,7 @@
    --bd-radius-default: 0.8rem;
 
    --max-width-mobile: 37.5rem;
-   --max-width-tablet: 76.8rem;
+   --max-width-tablet: 80rem;
 }
 
 .u-color-violet {
@@ -67,6 +67,7 @@ picture {
 }
 
 .card--picture {
+   width: 100%;
    border-radius: inherit;
 }
 
@@ -110,6 +111,8 @@ picture {
 .stats__query {
    display: flex;
    flex-direction: column;
+   justify-content: center;
+   align-items: center;
    gap: 0.5rem;
 }
 
@@ -121,4 +124,62 @@ picture {
    font-size: 1.2rem;
    text-transform: uppercase;
    color: var(--color-slightly-transparent-white);
+}
+
+@media only screen and (min-width: 1024px) {
+   html {
+      font-size: 62.5%;
+   }
+
+   .card {
+      max-width: var(--max-width-tablet);
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      border-bottom-right-radius: 0;
+      border-top-left-radius: var(--bd-radius-default);
+   }
+
+   .card--title {
+      font-size: 2.5rem;
+   }
+   .card--description {
+      font-size: 1.3rem;
+   }
+
+   br {
+      display: none;
+   }
+   .card__main {
+      grid-column: 1/2;
+      grid-row: 1/1;
+      text-align: start;
+      padding: 0 4rem;
+      align-self: center;
+   }
+
+   .card__header {
+      grid-column: 2/-1;
+      grid-row: 1/1;
+   }
+
+   picture {
+      border-top-left-radius: 0;
+      border-bottom-right-radius: var(--bd-radius-default);
+   }
+   .stats {
+      flex-direction: row;
+   }
+
+   .card--picture {
+      border-top-left-radius: 0;
+   }
+
+   .stats--number {
+      font-size: 1.9rem;
+   }
+   .stats--label {
+      font-size: 1.1rem;
+   }
 }
