@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- displays site properly based on user's device -->
+
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="32x32"
+         href="./images/favicon-32x32.png"
+      />
+      <link rel="stylesheet" href="css/reset.css" />
+      <link rel="stylesheet" href="css/style.css " />
+      <title>Frontend Mentor | Stats preview card component</title>
+   </head>
+   <body>
+      <div class="wrapper">
+         <article class="card">
+            <header class="card__header">
+               <picture>
+                  <source
+                     media="(min-width:1024px)"
+                     srcset="images/image-header-desktop.jpg"
+                  />
+                  <img
+                     src="images/image-header-mobile.jpg"
+                     alt=""
+                     class="card--picture"
+                  />
+                  <div class="overlay">&nbsp;</div>
+               </picture>
+            </header>
+            <main class="card__main">
+               <h3 class="card--title">
+                  Get <span class="u-color-violet">insights</span> that help
+                  your business grow.
+               </h3>
+               <p class="card--description">
+                  Discover the benefits of data analytics and make better
+                  decisions regarding revenue, customer experience, and overall
+                  efficiency.
+               </p>
+
+               <div class="stats">
+                  <div class="stats__company">
+                     <h4 class="stats--number">10k&plus;</h4>
+                     <p class="stats--label">companies</p>
+                  </div>
+                  <div class="stats__template">
+                     <h4 class="stats--number">314</h4>
+                     <p class="stats--label">templates</p>
+                  </div>
+                  <div class="stats__query">
+                     <h4 class="stats--number">12m&plus;</h4>
+                     <p class="stats--label">queries</p>
+                  </div>
+               </div>
+            </main>
+         </article>
+      </div>
+   </body>
+</html>
