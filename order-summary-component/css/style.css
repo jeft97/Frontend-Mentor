@@ -35,6 +35,8 @@ body {
    font-family: var(--ff-default);
    font-weight: var(--fw-medium);
    font-size: var(--fs-default);
+
+   overflow: hidden;
 }
 
 .wrapper {
@@ -49,9 +51,9 @@ body {
 .pattern {
    position: absolute;
    width: 100%;
-   height: 35%;
-   background-image: url(../images/pattern-background-mobile.svg);
    top: 0;
+   height: 55vw;
+   background-image: url(../images/pattern-background-mobile.svg);
    left: 0;
    background-repeat: no-repeat;
    background-size: cover;
@@ -151,8 +153,8 @@ body {
 
 @media only screen and (min-width: 1440px) {
    .pattern {
-      top: -5%;
-      height: 50%;
+      top: -9vh;
+      height: 30vw;
       background-image: url(../images/pattern-background-desktop.svg);
    }
    body {
