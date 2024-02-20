@@ -40,12 +40,21 @@ body {
 .wrapper {
    width: 100%;
    min-height: 100vh;
-   background-image: url(../images/pattern-background-mobile.svg);
-   background-repeat: no-repeat;
    background-color: var(--color-primary-pale-blue);
-
    display: grid;
    place-content: center;
+   position: relative;
+}
+
+.pattern {
+   position: absolute;
+   width: 100%;
+   height: 35%;
+   background-image: url(../images/pattern-background-mobile.svg);
+   top: 0;
+   left: 0;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 
 .card {
@@ -54,6 +63,7 @@ body {
    border-radius: var(---bd-radius-default);
 
    box-shadow: var(--shadow--1);
+   z-index: 1;
 }
 
 .card__header,
@@ -110,6 +120,7 @@ body {
 .btn--change:link {
    font-size: 1.3rem;
    color: var(--color-primary-bright-blue);
+   font-weight: var(--fw-bold);
 }
 
 .btn {
@@ -136,4 +147,35 @@ body {
 }
 .btn--cancel {
    color: var(--color-neutral-desaturated-blue);
+}
+
+@media only screen and (min-width: 1440px) {
+   .pattern {
+      top: -5%;
+      height: 50%;
+      background-image: url(../images/pattern-background-desktop.svg);
+   }
+   body {
+      font-size: 1.6rem;
+   }
+
+   .card {
+      max-width: var(--max-width-desktop);
+   }
+   .card__main {
+      padding: 4.8rem;
+   }
+
+   .card--title {
+      font-size: 2.8rem;
+   }
+
+   .card--desc {
+      font-size: 1.6rem;
+   }
+
+   .heading--3,
+   .info-plan__box > small {
+      font-size: 1.6rem;
+   }
 }
