@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+   --color-primary-pale-blue: hsl(225, 100%, 94%);
+   --color-primary-bright-blue: hsl(245, 75%, 52%);
+
+   --color-neutral-very-pale-blue: hsl(225, 100%, 98%);
+   --color-neutral-desaturated-blue: hsl(224, 23%, 55%);
+   --color-dark-blue: hsl(223, 47%, 23%);
+
+   --color-white: hsl(0, 0%, 100%);
+
+   --shadow--1: 0 4rem 4rem -2rem rgba(56, 42, 225, 15.18%);
+   --shadow--2: 0 2rem 2rem rgba(56, 42, 225, 19.03%);
+
+   --ff-default: 'Red Hat Display', sans-serif;
+   --fs-default: 1.5rem;
+   --fs-heading: 2.2rem;
+
+   --fw-medium: 500;
+   --fw-bold: 700;
+   --fw-black: 900;
+
+   ---bd-radius-default: 2rem;
+
+   --max-width-mobile: 32.7rem;
+   --max-width-desktop: 45rem;
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-family: var(--ff-default);
+   font-weight: var(--fw-medium);
+   font-size: var(--fs-default);
+}
+
+.wrapper {
+   width: 100%;
+   min-height: 100vh;
+   background-image: url(../images/pattern-background-mobile.svg);
+   background-repeat: no-repeat;
+   background-color: var(--color-primary-pale-blue);
+
+   display: grid;
+   place-content: center;
+}
+
+.card {
+   max-width: var(--max-width-mobile);
+   background-color: var(--color-white);
+   border-radius: var(---bd-radius-default);
+
+   box-shadow: var(--shadow--1);
+}
+
+.card__header,
+.card--illustration {
+   border-top-right-radius: inherit;
+   border-top-left-radius: inherit;
+}
+
+.card__main {
+   padding: 3.2rem;
+   text-align: center;
+}
+
+.card--title {
+   font-weight: var(--fw-black);
+   color: var(--color-dark-blue);
+   margin-bottom: 1.6rem;
+   font-size: var(--fs-heading);
+}
+
+.card--desc {
+   color: var(--color-neutral-desaturated-blue);
+   line-height: 1.8;
+   margin-bottom: 2.4rem;
+}
+
+.info-plan {
+   padding: 1.6rem;
+   background-color: var(--color-neutral-very-pale-blue);
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+
+   border-radius: 1.1rem;
+   margin-bottom: 2.4rem;
+}
+.info-plan__box {
+   margin-right: auto;
+   display: flex;
+   flex-direction: column;
+}
+.info-plan__box > small {
+   font-size: 1.4rem;
+   color: var(--color-neutral-desaturated-blue);
+}
+
+.heading--3 {
+   font-size: 1.4rem;
+   font-weight: var(--fw-black);
+   color: var(--color-dark-blue);
+}
+
+.btn--change,
+.btn--change:link {
+   font-size: 1.3rem;
+   color: var(--color-primary-bright-blue);
+}
+
+.btn {
+   appearance: none;
+   -webkit-appearance: none; /* Para navegadores WebKit */
+   -moz-appearance: none;
+   border: none;
+   background-color: transparent;
+   display: block;
+   width: 100%;
+
+   cursor: pointer;
+   font-weight: var(--fw-black);
+}
+
+.btn--payment {
+   padding: 1.5rem 0;
+   background-color: var(--color-primary-bright-blue);
+   color: var(--color-white);
+
+   border-radius: 1.1rem;
+   margin-bottom: 2.4rem;
+   box-shadow: var(--shadow--2);
+}
+.btn--cancel {
+   color: var(--color-neutral-desaturated-blue);
+}
