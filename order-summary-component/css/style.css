@@ -68,8 +68,8 @@ body {
    z-index: 1;
 }
 
-.card__header,
-.card--illustration {
+.card__header {
+   overflow: hidden;
    border-top-right-radius: inherit;
    border-top-left-radius: inherit;
 }
@@ -146,12 +146,40 @@ body {
    border-radius: 1.1rem;
    margin-bottom: 2.4rem;
    box-shadow: var(--shadow--2);
+   transition: opacity 0.3s;
 }
 .btn--cancel {
    color: var(--color-neutral-desaturated-blue);
+   transition: all 0.3s;
 }
 
-@media only screen and (min-width: 1440px) {
+@media (hover: hover) {
+   .btn--payment:hover {
+      opacity: 0.8;
+   }
+   .btn--change:hover {
+      opacity: 0.7;
+      text-decoration: none;
+   }
+   .btn--cancel:hover {
+      color: var(--color-dark-blue);
+   }
+}
+
+@media screen and (pointer: coarse) {
+   .btn--payment:hover {
+      opacity: 0.8;
+   }
+   .btn--change:hover {
+      opacity: 0.7;
+      text-decoration: none;
+   }
+   .btn--cancel:hover {
+      color: var(--color-dark-blue);
+   }
+}
+
+@media only screen and (min-width: 1024px) {
    .pattern {
       top: -9vh;
       height: 30vw;
