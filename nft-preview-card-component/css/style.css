@@ -80,10 +80,6 @@ body {
    transition: opacity 0.5s ease-in-out;
 }
 
-.card__header:hover > .overlay {
-   opacity: 1;
-}
-
 .card--img {
    border-radius: var(--bd-radius-small);
 }
@@ -121,9 +117,46 @@ body {
    display: flex;
    align-items: center;
    gap: 1.6rem;
+   border-top: 1px solid var(---color-neutral-very-dark-blue-line);
+   padding-top: 1.6rem;
 }
 .card--avatar {
    height: 3.3rem;
    border: 1px solid var(--color-neutral-white);
    border-radius: 50%;
+}
+.card--author {
+   font-size: var(--fs-caption-default);
+   font-weight: var(--fw-regular);
+}
+
+.card--author > a {
+   color: var(--color-neutral-white);
+   font-size: var(--fw-light);
+   cursor: pointer;
+   text-decoration: none;
+}
+
+@media (hover: hover) {
+   .card__header:hover > .overlay {
+      opacity: 1;
+   }
+
+   .card--title:hover {
+      cursor: pointer;
+      color: var(--color-primary-cyan);
+   }
+
+   .card--author > a:hover {
+      color: var(--color-primary-cyan);
+   }
+}
+
+@media only screen and (min-width: 1440px) {
+   html {
+      --fs-caption-default: 1.6rem;
+   }
+   .card {
+      max-width: var(--max-size-card-desktop);
+   }
 }
