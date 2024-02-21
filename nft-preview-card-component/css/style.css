@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+   --color-primary-soft-blue: hsl(215, 51%, 70%);
+   --color-primary-cyan: hsl(178, 100%, 50%);
+
+   /* main background */
+   ---color-neutral-very-dark-blue-main: hsl(217, 54%, 11%);
+   /* card background*/
+   ---color-neutral-very-dark-blue-card: hsl(216, 50%, 16%);
+   /*line color*/
+   ---color-neutral-very-dark-blue-line: hsl(215, 32%, 27%);
+   --color-neutral-white: hsl(0, 0%, 100%);
+
+   --ff-default: 'Outfit', sans-serif;
+
+   --fs-body-default: 1.8rem;
+   --fs-heading-default: 2.2rem;
+   --fs-caption-default: 1.5rem;
+
+   --fw-light: 300;
+   --fw-regular: 400;
+   --fw-semibold: 600;
+
+   --max-size-card-mobile: 32.7rem;
+   --max-size-card-desktop: 35rem;
+
+   --bd-radius-big: 1.5rem;
+   --bd-radius-small: 0.8rem;
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-family: var(--ff-default);
+   font-weight: var(--fw-light);
+   font-size: var(--fs-body-default);
+   color: var(--color-primary-soft-blue);
+}
+
+.wrapper {
+   width: 100%;
+   min-height: 100vh;
+   background-color: var(---color-neutral-very-dark-blue-main);
+
+   display: grid;
+   place-content: center;
+}
+
+.card {
+   max-width: var(--max-size-card-mobile);
+   background-color: var(---color-neutral-very-dark-blue-card);
+   border-radius: var(--bd-radius-big);
+   padding: 2.4rem;
+
+   box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 9.53%);
+}
+
+.card__header {
+   margin-bottom: 2.4rem;
+   position: relative;
+   cursor: pointer;
+}
+
+.overlay {
+   /* Local override */
+   --color-primary-cyan: hsla(178, 100%, 50%, 50.3%);
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   background-color: var(--color-primary-cyan);
+   position: absolute;
+   width: 100%;
+   top: 0;
+   opacity: 0;
+   transition: opacity 0.5s ease-in-out;
+}
+
+.card__header:hover > .overlay {
+   opacity: 1;
+}
+
+.card--img {
+   border-radius: var(--bd-radius-small);
+}
+
+.card__main {
+   margin-bottom: 2.4rem;
+   display: flex;
+   flex-direction: column;
+   gap: 1.4rem;
+}
+
+.card--title {
+   color: var(--color-neutral-white);
+   font-size: var(--fs-heading-default);
+   font-weight: var(--fw-semibold);
+}
+.caption-box {
+   display: flex;
+   align-items: center;
+   gap: 0.8rem;
+}
+
+.caption--text {
+   font-size: var(--fs-caption-default);
+   font-weight: var(--fw-regular);
+}
+
+.caption--text-1 {
+   margin-right: auto;
+   color: var(--color-primary-cyan);
+   font-weight: var(--fw-semibold);
+}
+
+.card__footer {
+   display: flex;
+   align-items: center;
+   gap: 1.6rem;
+}
+.card--avatar {
+   height: 3.3rem;
+   border: 1px solid var(--color-neutral-white);
+   border-radius: 50%;
+}
