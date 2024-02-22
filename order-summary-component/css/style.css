@@ -28,7 +28,7 @@
 }
 
 html {
-   font-size: 62.5%;
+   font-size: 50%;
 }
 
 body {
@@ -185,6 +185,13 @@ body {
       height: 30vw;
       background-image: url(../images/pattern-background-desktop.svg);
    }
+}
+
+@media only screen and (min-width: 1440px) {
+   html {
+      font-size: 62.5%;
+   }
+
    body {
       font-size: 1.6rem;
    }
@@ -208,9 +215,7 @@ body {
    .info-plan__box > small {
       font-size: 1.6rem;
    }
-}
 
-@media only screen and (min-width: 1440px) {
    .pattern {
       top: 0;
       height: 31vw;
