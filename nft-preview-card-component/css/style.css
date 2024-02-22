@@ -30,7 +30,7 @@
 }
 
 html {
-   font-size: 50%;
+   font-size: 62.5%;
 }
 
 body {
@@ -155,7 +155,6 @@ body {
 
 @media only screen and (min-width: 1440px) {
    html {
-      font-size: 62.5%;
       --fs-caption-default: 1.6rem;
    }
    .card {
