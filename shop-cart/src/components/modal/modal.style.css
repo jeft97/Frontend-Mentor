@@ -1,0 +1,74 @@
+.modal {
+   width: 100%;
+   height: 100vh;
+   left: 0;
+   top: 0;
+   position: fixed;
+   z-index: 2;
+   background-color: hsla(0, 0%, 0%, 0.753);
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.cart__summary span {
+   font-size: 1.5rem;
+}
+
+.modal--quantity {
+   color: var(--color-red);
+}
+
+.modal__content {
+   width: 100%;
+   max-width: var(--max-s-screen-tablet);
+   padding: 4rem 1.5rem;
+   background-color: var(--color-white);
+   border-radius: var(--bd-r-xl);
+}
+
+.modal__list {
+   padding: 2rem 1rem;
+   background-color: var(--color-rose-50);
+   border-radius: var(--bd-r-s);
+   margin-top: 3.2rem;
+}
+
+.box-list {
+   max-height: 20rem;
+   overflow-y: scroll;
+   padding-right: 1.8rem;
+}
+
+.modal__list--item {
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+   border-bottom: 1px solid var(--color-rose-100);
+   padding-bottom: 1.5rem;
+}
+
+.modal__list--item img {
+   height: 4rem;
+   border-radius: calc(var(--bd-r-s) / 2);
+}
+
+.modal--text {
+   margin-right: auto;
+}
+
+.modal .heading--1 {
+   width: 3.5ch;
+   font-size: 2.5rem;
+}
+
+.modal__content > img {
+   height: 4rem;
+   margin-bottom: 2rem;
+}
+
+.paraghaphy {
+   font-size: 1.4rem;
+   margin-top: 0.8rem;
+}

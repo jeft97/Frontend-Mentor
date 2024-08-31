@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+   --color-red: rgb(199, 58, 15);
+   --color-green: hsl(159, 69%, 38%);
+
+   --color-rose-50: hsl(20, 50%, 98%);
+   --color-rose-100: hsl(13, 31%, 94%);
+   --color-rose-300: hsl(14, 25%, 72%);
+   --color-rose-400: hsl(7, 20%, 60%);
+   --color-rose-500: hsl(12, 20%, 44%);
+   --color-rose-900: hsl(14, 65%, 9%);
+
+   --color-black: hsl(0, 0%, 0%);
+   --color-white: hsl(0, 0%, 100%);
+
+   --f-f-def: 'Red Hat Text', sans-serif;
+   --f-s-def: 1.6rem;
+   --fw-def: 400;
+   --line-h-def: 1.5;
+
+   --bd-r-s: 0.8rem;
+   --bd-r-xl: 1.2rem;
+
+   --max-s-screen-desktop: 121.6rem;
+   --max-s-screen-tablet: 68.8rem;
+   --max-s-screen-mobile: 32.7rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+   -moz-text-size-adjust: none;
+   -webkit-text-size-adjust: none;
+   text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+   margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'],
+li {
+   list-style: none;
+}
+
+/* Set core body defaults */
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+   line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+   text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+   text-decoration-skip-ink: auto;
+   color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+   max-width: 100%;
+   display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+   font-family: inherit;
+   font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+   min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+   scroll-margin-block: 5ex;
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-family: var(--f-f-def);
+   font-size: var(--f-s-def);
+   font-weight: var(--fw-def);
+   line-height: var(--line-h-def);
+   color: var(--color-rose-900);
+}
+
+.app {
+   background-color: var(--color-rose-50);
+   padding: 2rem;
+   min-height: 100vh;
+   position: relative;
+}
+
+.wrapper {
+   width: 100%;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-row-gap: 4rem;
+}
+
+.heading--1 {
+   color: var(--color-rose-900);
+   font-size: 3rem;
+}
+
+.heading--3 {
+   font-weight: 600;
+}
+
+.product__list {
+   margin-top: 3rem;
+   --min: 24ch;
+   --gap: 2rem;
+
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+   grid-gap: 2.5rem;
+}
+
+.wrapper-img img {
+   border-radius: var(--bd-r-s);
+   transition: transform 0.3s ease;
+}
+
+.wrapper-img {
+   overflow: hidden;
+   border-radius: var(--bd-r-s);
+}
+.wrapper-img > picture img.has-border {
+   border: 3px solid var(--color-red);
+}
+
+.wrapper img:hover {
+   transform: scale(1.3);
+   backface-visibility: hidden;
+}
+
+.btn {
+   appearance: none;
+   --webkit-appearance: none;
+   cursor: pointer;
+}
+
+.btn--order {
+   width: 100%;
+   margin-top: 2.5rem;
+   background-color: var(--color-red);
+   color: var(--color-white);
+   border: transparent;
+   padding: 1.5rem;
+   font-size: 1.5rem;
+
+   border-radius: 100rem;
+}
+
+.loader {
+   color: var(--color-red);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translateX(-50%);
+   font-size: 11px;
+   background: var(--color-red);
+   animation: escaleY 1s infinite ease-in-out;
+   width: 1em;
+   height: 4em;
+   animation-delay: -0.16s;
+   transform: scale(0.5);
+}
+
+/*572px / 16px = 35.75em*/
+@media only screen and (min-width: 35.75em) {
+   .cart__info {
+      font-size: 1.5rem;
+   }
+
+   .modal .heading--1 {
+      font-size: 3rem;
+   }
+   .modal__content {
+      padding: 4rem 3rem;
+   }
+}
+
+/* 1024px / 16px = 64em */
+@media only screen and (min-width: 64em) {
+   .wrapper {
+      max-width: calc(var(--max-s-screen-desktop));
+      margin: 5% auto;
+      grid-template-columns: 2.5fr 1fr;
+      grid-column-gap: 4rem;
+   }
+   .modal .heading--1 {
+      width: 100%;
+   }
+   .loader {
+      transform: scale(0.7);
+   }
+   .cart {
+      align-self: start;
+   }
+
+   .cart__info {
+      padding: 1.3rem;
+      font-size: 1.4rem;
+   }
+   .modal__list {
+      padding: 2rem 2.5rem;
+   }
+}
+
+.empty {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 2rem;
+}
+
+.empty p {
+   font-size: 1.4rem;
+   color: var(--color-rose-500);
+}
+
+.loader:before,
+.loader:after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 2em;
+   background: var(--color-red);
+   width: 1em;
+   height: 4em;
+   animation: escaleY 1s infinite ease-in-out;
+}
+.loader:before {
+   left: -2em;
+   animation-delay: -0.32s;
+}
+
+@keyframes escaleY {
+   0%,
+   80%,
+   100% {
+      box-shadow: 0 0;
+      height: 4em;
+   }
+   40% {
+      box-shadow: 0 -2em;
+      height: 5em;
+   }
+}
+
+.error-message {
+   position: absolute;
+   left: 45%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+.error-message p {
+   font-size: 2rem;
+   color: var(--color-rose-900);
+}
